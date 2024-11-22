@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Vyhledávání</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .header {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        .header a {
+            text-decoration: none;
+            color: #1a73e8;
+            margin-left: 15px;
+            font-size: 14px;
+        }
+        .header a:hover {
+            text-decoration: underline;
+        }
+        .search-container {
+            margin-top: -50px;
+        }
+        input[type="text"] {
+            width: 400px;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 18px;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #357ae8;
+        }
+        .lucky {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 15px;
+            background-color: #f8f9fa;
+            color: #202124;
+            border: 1px solid #dfe1e5;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .lucky:hover {
+            background-color: #f1f3f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="image.html">Vyhledávání obrázků</a>
+        <a href="advanced.html">Pokročilé vyhledávání</a>
+    </div>
+
+    <div class="search-container">
+        <form action="https://www.google.com/search">
+            <input type="text" name="q" placeholder="Zadejte hledaný výraz">
+            <div>
+                <input type="submit" value="Vyhledat Googlem">
+            </div>
+        </form>
+        <a class="lucky" href="https://www.google.com/search?btnI=1&q=" onclick="this.href+=document.querySelector('input[name=q]').value">Mám štěstí</a>
+    </div>
+</body>
+</html>
